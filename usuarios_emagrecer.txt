@@ -1,0 +1,47 @@
+Dieta:
+    Id  UsuarioId       ListaReceita
+0    4        386  96,230,228,103,82
+1    5        387   46,85,103,80,174
+2    6        388   80,82,132,79,115
+3    7        390  191,79,47,174,132
+4    8        391     47,82,61,41,79
+5    9        393    86,61,115,80,99
+6   11        395   103,132,85,80,82
+7   12        396   82,191,99,85,228
+8   19        403     74,93,69,76,88
+9   20        404     78,54,70,92,72
+10  21        405     70,94,69,72,88
+11  22        406     77,93,91,51,87
+12  23        407     78,94,51,93,69
+13  24        408     92,94,51,69,54
+14  25        409     54,51,88,92,87
+15  26        410     78,74,94,51,87
+16  27        411     90,94,92,70,71
+17  28        412     69,72,94,92,87
+18  29        413     75,92,73,90,93
+
+Emagrecer:
+     Id      Nome Sobrenome       Sexo  Altura   Peso                      Email                                                         Senha dataNascimento   Objetivo Alergia
+0   403   Pereira      Lima  Masculino   185.0  115.0      pereiralima@gmail.com  $2a$12$u2tBHjNKyEmUrzJoBadhEukbbR1spBUfuHxSv6xuPT6BONs7KxlMu     2000-04-22  Emagrecer
+1   404     Julia     Alves   Feminino   165.0   70.0       juliaalves@gmail.com  $2a$12$5cuGPNgRAnBwXKkFTq.hHeff9a4/DSzT9jdfw8vI3NUTO5o7lYfDe     1970-04-22  Emagrecer
+2   405   Pereira      Lima  Masculino   185.0  115.0      pereiralima@gmail.com  $2a$12$vWGRGRPATVv/z10dYwE.9e.h5pT/jIP7ZW1hl9JxweNX05p3QihSK     2000-04-22  Emagrecer
+3   406  Anderson     Julio  Masculino   185.0  105.0    andersonjulio@gmail.com  $2a$12$orEDsuN8b4EMhKpNTHPMlOk8p1.mwNSrr2kXv.4YJLfOnZ6Gfze0W     2000-04-22  Emagrecer
+4   407     Rhian      Ma�a  Masculino   175.0   95.0        rhianma�a@gmail.com  $2a$12$ssb8rXotCoz37KVLURsPIutlir5/xSXRcFoyymO4b47uAYFj8bgee     1990-04-22  Emagrecer
+5   408  Fernando   Beteiro  Masculino   175.0   95.0  fernandobeteiro@gmail.com  $2a$12$s2oWwg/P3adgmk5HGMpgyOSHoRFbdQGGjZ.EeBGaS8KiXyqwcLub6     1970-04-22  Emagrecer
+6   409    Junior      urso  Masculino   175.0   95.0       juniorurso@gmail.com  $2a$12$Zl9qbAi9ckltG0sqApNUXeBPJCOmeJbqMbGm6776KLpecClIQqYL6     1970-04-22  Emagrecer
+7   410   Beatriz     Julia   Feminino   175.0   85.0     beatrizjulia@gmail.com  $2a$12$xTb8.h5Rhqn/GzerfayueehLFTesRW75lf.m24QSReBBkd84jevYe     1970-04-22  Emagrecer
+8   411    Brenda     Julia   Feminino   200.0  135.0      brendajulia@gmail.com  $2a$12$GmRuFCgWSHA.b0pQ5HRLOOkTD1CD1Bu2CNwq9aDHC9.89r/2AWdZW     1970-04-22  Emagrecer
+9   412    Carlos      Lala  Masculino   198.0  135.0       carloslala@gmail.com  $2a$12$HPlN8zQgWSawJMscIY65iuaAzJDttWWscIgBjYuIthT/4N7/UnPSy     1970-04-22  Emagrecer
+10  413     Pedro     Omena  Masculino   168.0   85.0       pedroomena@gmail.com  $2a$12$/dTMSgD9E0J39iQ5u2fkA.pCZg0VQsPYPsN0DtGWBuW26gTUj0Z0m     1970-04-22  Emagrecer
+
+Criar massa:
+
+    Id      Nome   Sobrenome       Sexo  Altura  Peso                         Email                                                         Senha dataNascimento              Objetivo Alergia
+0  386      Igor        Goes  Masculino   183.0  70.0            igorgoes@gmail.com  $2a$12$AgSBI/lE3r/q78U0guI7wuC1tupEepkLxSPEy/0dNTz6yKniuY.1K     2002-04-22  Criar massa corporal
+1  387   Gustavo        Goes  Masculino   190.0  80.0         gustavogoes@gmail.com  $2a$12$9pjK8W5ibsn76cqqYlY8VuinYBZm3VclyAKFtT7.XajI1gMaW3CmG     2002-04-22  Criar massa corporal
+2  388     Julio  Nascimento  Masculino   170.0  60.0     julionascimento@gmail.com  $2a$12$Zb9nC0Px5czCkEPT2S07ye8RtKoxjIeYnk6FSbmd3662jFFdI.Zze     2002-04-22  Criar massa corporal
+3  390   Gabriel  Nascimento  Masculino   195.0  70.0   gabrielnascimento@gmail.com  $2a$12$OEuiFf90Y6zhDjFE2jtDOeEbmX/wbDivOyL8EGd0TI3yxmwmFn0i6     2002-04-22  Criar massa corporal
+4  391    Mendes  Nascimento  Masculino   195.0  70.0    mendesnascimento@gmail.com  $2a$12$LmwW5Sr2I8UVsJqGA5BrNeHcfJIZ1rBUR.aLYJsJEIhx0Eod/.eSO     2002-04-22  Criar massa corporal
+5  393  Benedito  Nascimento  Masculino   185.0  70.0  beneditonascimento@gmail.com  $2a$12$A0xyWBUKqk6W8Jx3jIJQXeKkgEx0dy0Ifww69pX9.Id9o6nLN.oDO     2002-04-22  Criar massa corporal
+6  395   Leandro  Nascimento  Masculino   175.0  60.0   leandronascimento@gmail.com  $2a$12$AFvj6HG2fGDa3.Av1Bk4NObjEVgY2G9Ac2xPXYgvRjJkBU2j.Ixia     2002-04-22  Criar massa corporal
+7  396    Gisele  Nascimento   Feminino   155.0  50.0    giselenascimento@gmail.com  $2a$12$hFQYCrUM1jiwH0XbzVvSi..grtCOT6KNznPkb1cgNrCJ7coICzsDe     1970-04-22  Criar massa corporal

@@ -1,0 +1,362 @@
+﻿Nome;Sobrenome;Peso;Altura;Idade;Sexo;Restricao_Alimentar;Objetivo
+69.0;169;20;Feminino;Corante;Emagrecer
+125.0;183;25;Masculino;Leitederivados ;Emagrecer
+70.0;157;26;Feminino;N/A;Emagrecer
+58.0;166;21;Masculino;N/A;Aumentar massa corporal
+85.0;165;20;Feminino;N/A;Emagrecer
+62.0;170;21;Masculino;N/A;Satisfeito com peso atual
+55.0;172;29;Masculino;N/A;Aumentar massa corporal
+64.4;179;16;Masculino;N/A;Aumentar massa corporal
+65.8;173;18;Masculino;N/A;Aumentar massa corporal
+65.0;177;29;Masculino;N/A;Aumentar massa corporal
+75.0;180;20;Masculino;N/A;Satisfeito com peso atual
+89.0;179;24;Masculino;Arroz;Aumentar massa corporal
+66.0;176;26;Masculino;N/A;Aumentar massa corporal
+70.0;178;26;Masculino;N/A;Aumentar massa corporal
+113.3;165;33;Masculino;frutos do mar;Emagrecer
+99.0;170;30;Masculino;carnes brancas, carnes vermelhas, ovo, batata, mandioquinha, mandioca, Arroz, feijão, pães, massas, cerveja;Emagrecer
+65.0;172;23;Feminino;Leite;Emagrecer
+68.1;162;25;Feminino;N/A;Emagrecer
+80.0;170;17;Feminino;N/A;Emagrecer
+90.0;177;21;Masculino;N/A;Emagrecer
+84.0;168;26;Masculino;N/A;Emagrecer
+53.0;150;21;Feminino;N/A;Satisfeito com peso atual
+60.0;163;22;Feminino;N/A;Satisfeito com peso atual
+63.0;170;24;Masculino;N/A;Aumentar massa corporal
+90.0;180;22;Masculino;leite;Satisfeito com peso atual
+94.0;182;30;Masculino;N/A;Emagrecer
+74.0;170;27;Masculino;N/A;Aumentar massa corporal
+58.0;177;21;Masculino;leite;Satisfeito com peso atual
+130.0;178;26;Masculino;derivados de leite;Emagrecer
+80.0;182;30;Masculino;N/A;Satisfeito com peso atual
+90.5;173;26;Masculino;N/A;Aumentar massa corporal
+58.0;175;16;Masculino;N/A;Aumentar massa corporal
+72.0;186;19;Masculino;N/A;Aumentar massa corporal
+73.0;193;18;Masculino;Lactose;Satisfeito com peso atual
+90.0;190;22;Masculino;N/A;Emagrecer
+60.0;178;16;Masculino;N/A;Satisfeito com peso atual
+120.0;185;21;Masculino;N/A;Emagrecer
+60.0;175;18;Masculino;N/A;Aumentar massa corporal
+66.0;173;22;Masculino;N/A;Aumentar massa corporal
+65.0;170;18;Masculino;Peixe, melão, abacate, abóbora;Aumentar massa corporal
+73.0;161;29;Feminino;N/A;Emagrecer
+90.0;155;31;Feminino;N/A;Emagrecer
+67.0;158;17;Feminino;refrigerante ;Emagrecer
+65.0;159;23;Feminino;Camarão ;Emagrecer
+90.0;170;27;Masculino;N/A;Satisfeito com peso atual
+56.0;156;51;Feminino;Feijão, leite;Aumentar massa corporal
+95.0;170;44;Masculino;Leite ;Emagrecer
+79.4;164;49;Feminino;N/A;Emagrecer
+86.6;153;29;Feminino;N/A;Emagrecer
+75.0;165;26;Feminino;Grãos, glúten, lactose ;Emagrecer
+65.4;162;44;Feminino;N/A;Satisfeito com peso atual
+62.0;157;57;Feminino;Lactose;Emagrecer
+59.0;160;59;Feminino;N/A;Emagrecer
+93.0;168;30;Feminino;N/A;Emagrecer
+63.0;163;44;Feminino;Lactose ;Emagrecer
+62.0;165;60;Feminino;N/A;Satisfeito com peso atual
+88.0;159;27;Feminino;N/A;Emagrecer
+105.0;173;35;Masculino;N/A;Emagrecer
+105.0;165;37;Feminino;Feijão ;Emagrecer
+62.0;160;24;Feminino;N/A;Emagrecer
+60.0;157;19;Feminino;N/A;Emagrecer
+71.0;157;28;Feminino;N/A;Emagrecer
+79.8;162;66;Feminino;Leite;Emagrecer
+85.6;171;24;Masculino;N/A;Aumentar massa corporal
+62.7;165;56;Feminino;N/A;Emagrecer
+73.0;167;34;Masculino;N/A;Emagrecer
+87.0;173;26;Masculino;N/A;Satisfeito com peso atual
+85.0;166;46;Feminino;N/A;Emagrecer
+70.0;156;57;Feminino;Carboidrato;Emagrecer
+83.0;151;55;Feminino;N/A;Emagrecer
+90.1;160;55;Feminino;N/A;Emagrecer
+66.5;151;47;Feminino;Frutos do mar ;Emagrecer
+70.0;160;72;Feminino;Feijão ;Aumentar massa corporal
+83.0;165;39;Feminino;N/A;Emagrecer
+94.0;160;37;Feminino;N/A;Emagrecer
+62.0;156;36;Feminino;N/A;Emagrecer
+65.0;175;26;Masculino;N/A;Satisfeito com peso atual
+88.0;170;24;Feminino;N/A;Emagrecer
+59.0;161;16;Feminino;N/A;Satisfeito com peso atual
+54.0;163;29;Feminino;Banana ;Aumentar massa corporal
+79.7;170;31;Feminino;N/A;Emagrecer
+75.9;159;49;Feminino;N/A;Emagrecer
+66.0;163;44;Feminino;N/A;Satisfeito com peso atual
+49.7;160;19;Feminino;Feijão;Satisfeito com peso atual
+74.0;163;42;Feminino;N/A;Aumentar massa corporal
+72.0;163;47;Feminino;N/A;Emagrecer
+100.0;175;24;Masculino;N/A;Emagrecer
+50.8;173;16;Masculino;N/A;Aumentar massa corporal
+52.0;151;33;Feminino;N/A;Emagrecer
+69.0;158;40;Feminino;N/A;Emagrecer
+85.0;162;44;Feminino;N/A;Emagrecer
+91.6;168;38;Feminino;N/A;Emagrecer
+94.0;165;37;Feminino;N/A;Emagrecer
+63.0;165;14;Masculino;N/A;Emagrecer
+56.0;154;20;Feminino;N/A;Emagrecer
+78.9;180;21;Masculino;N/A;Aumentar massa corporal
+59.5;169;17;Masculino;Cogumelo;Satisfeito com peso atual
+80.0;170;45;Masculino;N/A;Satisfeito com peso atual
+85.0;187;21;Masculino;N/A;Aumentar massa corporal
+60.0;175;18;Masculino;N/A;Aumentar massa corporal
+75.0;172;21;Masculino;N/A;Aumentar massa corporal
+68.0;154;41;Feminino;Lactose;Emagrecer
+66.7;173;16;Masculino;Lactose;Aumentar massa corporal
+52.0;149;44;Feminino;N/A;Satisfeito com peso atual
+56.4;166;17;Feminino;lactose;Satisfeito com peso atual
+115.5;173;30;Masculino;acidez alta ;Emagrecer
+57.8;154;51;Feminino;Açúcar ;Aumentar massa corporal
+52.0;168;17;Masculino;N/A;Aumentar massa corporal
+62.0;165;50;Feminino;N/A;Emagrecer
+90.0;167;26;Feminino;N/A;Emagrecer
+79.0;159;33;Feminino;N/A;Emagrecer
+80.3;173;16;Masculino;N/A;Emagrecer
+120.0;187;22;Masculino;N/A;Satisfeito com peso atual
+68.0;170;27;Masculino;N/A;Aumentar massa corporal
+64.5;160;37;Feminino;N/A;Emagrecer
+93.5;179;44;Masculino;N/A;Aumentar massa corporal
+76.0;173;38;Feminino;N/A;Aumentar massa corporal
+64.0;150;40;Feminino;N/A;Emagrecer
+49.0;165;16;Feminino;N/A;Satisfeito com peso atual
+64.0;160;24;Feminino;N/A;Emagrecer
+84.0;178;64;Masculino;N/A;Aumentar massa corporal
+69.0;150;38;Feminino;N/A;Emagrecer
+75.0;163;16;Feminino;N/A;Emagrecer
+88.7;173;44;Feminino;N/A;Emagrecer
+76.0;156;46;Feminino;N/A;Emagrecer
+70.4;165;31;Feminino;N/A;Emagrecer
+124.0;180;42;Masculino;N/A;Emagrecer
+89.0;178;44;Masculino;N/A;Emagrecer
+94.0;163;23;Feminino;N/A;Emagrecer
+82.0;162;25;Feminino;N/A;Emagrecer
+81.0;163;50;Masculino;N/A;Emagrecer
+99.0;180;26;Masculino;N/A;Emagrecer
+66.6;180;28;Masculino;N/A;Aumentar massa corporal
+95.0;165;27;Feminino;N/A;Emagrecer
+85.00;185;33;Masculino;N/A;Satisfeito com peso atual
+50.7;164;17;Feminino;N/A;Aumentar massa corporal
+95.0;190;45;Masculino;N/A;Emagrecer
+105.9;175;24;Masculino;Frutos do mar ;Emagrecer
+65.0;186;27;Masculino;N/A;Aumentar massa corporal
+57.0;158;47;Feminino;Doces;Aumentar massa corporal
+105.0;170;52;Masculino;Ovo;Emagrecer
+50.0;150;44;Feminino;Leite;Emagrecer
+94.0;173;34;Masculino;N/A;Aumentar massa corporal
+64.4 ;174;16;Masculino;Vinagre ;Aumentar massa corporal
+67.6;157;36;Feminino;N/A;Emagrecer
+62.0;158;19;Feminino;N/A;Emagrecer
+71.0;162;36;Feminino;Leite;Emagrecer
+54.0;152;65;Feminino;Leite;Aumentar massa corporal
+67.7;176;16;Feminino;N/A;Emagrecer
+66.7;168;20;Feminino;N/A;Emagrecer
+120.0;191;24;Masculino;N/A;Emagrecer
+57.0;169;19;Feminino;N/A;Aumentar massa corporal
+65.0;167;22;Masculino;N/A;Satisfeito com peso atual
+48.0;165;17;Feminino;N/A;Aumentar massa corporal
+54.0;162;26;Masculino;Uva;Aumentar massa corporal
+75.0;165;19;Feminino;N/A;Emagrecer
+60.0;173;19;Feminino;N/A;Aumentar massa corporal
+130.0;180;24;Masculino;N/A;Emagrecer
+60.0;168;21;Feminino;melancia ;Emagrecer
+70.0;167;34;Masculino;N/A;Satisfeito com peso atual
+60.0;166;17;Feminino;N/A;Emagrecer
+89.0;158;24;Feminino;N/A;Emagrecer
+47.0;163;22;Feminino;N/A;Aumentar massa corporal
+68.0;170;35;Masculino;N/A;Satisfeito com peso atual
+68.2;159;64;Feminino;Leite;Aumentar massa corporal
+79.0;178;19;Masculino;Uva;Satisfeito com peso atual
+46.0;166;18;Feminino;N/A;Satisfeito com peso atual
+80.0;174;22;Masculino;pedra, terra, milho;Emagrecer
+57.0;170;20;Feminino;N/A;Satisfeito com peso atual
+70.0;160;22;Feminino;N/A;Emagrecer
+44.0;156;15;Feminino;N/A;Aumentar massa corporal
+58.0;167;16;Masculino;N/A;Aumentar massa corporal
+62.0;175;15;Masculino;N/A;Aumentar massa corporal
+62.0;165;20;Masculino;N/A;Aumentar massa corporal
+56.5;178;24;Masculino;N/A;Aumentar massa corporal
+53.0;160;46;Feminino;Leite;Satisfeito com peso atual
+43.0;160;16;Feminino;N/A;Aumentar massa corporal
+51.0;171;15;Masculino;N/A;Aumentar massa corporal
+50.0;160;17;Feminino;N/A;Aumentar massa corporal
+52.8;163;15;Feminino;N/A;Satisfeito com peso atual
+55.9;172;15;Masculino;N/A;Aumentar massa corporal
+76.0;180;30;Masculino;N/A;Satisfeito com peso atual
+66.4;167;19;Feminino;leite ;Emagrecer
+85.0;154;20;Feminino;N/A;Emagrecer
+53.0;158;16;Feminino;Leite;Aumentar massa corporal
+78.0;173;39;Masculino;Cebola ;Aumentar massa corporal
+50.0;155;14;Feminino;comidas gordurosas ;Emagrecer
+58.0;165;16;Feminino;N/A;Satisfeito com peso atual
+60.0;160;21;Feminino;N/A;Satisfeito com peso atual
+46.0;166;17;Masculino;N/A;Satisfeito com peso atual
+70.0;180;17;Masculino;N/A;Aumentar massa corporal
+60.0;160;15;Feminino;N/A;Emagrecer
+65.3;185;15;Masculino;Feijão;Aumentar massa corporal
+49.0;160;15;Masculino;N/A;Aumentar massa corporal
+46.6;163;16;Feminino;N/A;Emagrecer
+61.5;175;15;Masculino;N/A;Satisfeito com peso atual
+66.5;166;16;Feminino;N/A;Emagrecer
+55.0;177;19;Masculino;N/A;Aumentar massa corporal
+54.3;162;15;Feminino;feijão, peixe, espinafre, rúcula;Emagrecer
+48.0;170;15;Feminino;N/A;Aumentar massa corporal
+70.5;183;15;Masculino;N/A;Satisfeito com peso atual
+80.0;170;50;Masculino;Feijão ;Aumentar massa corporal
+80.0;176;26;Feminino;N/A;Satisfeito com peso atual
+70.0;173;17;Feminino;N/A;Aumentar massa corporal
+60.0;150;31;Masculino;Peixe;Emagrecer
+60.0;167;15;Masculino;N/A;Satisfeito com peso atual
+64.0;166;19;Feminino;azeitona, milho, ervilha, palmito, mamão ;Emagrecer
+102.0;178;44;Masculino;N/A;Emagrecer
+85.0;178;16;Masculino;N/A;Emagrecer
+49.8;160;15;Feminino;N/A;Aumentar massa corporal
+61.0;177;17;Masculino;N/A;Satisfeito com peso atual
+61.0;175;15;Masculino;N/A;Aumentar massa corporal
+79.0;165;33;Masculino;N/A;Emagrecer
+72.4;153;44;Feminino;N/A;Emagrecer
+74.0;167;33;Feminino;Banana;Emagrecer
+68.0;158;23;Feminino;N/A;Aumentar massa corporal
+60.0;160;62;Feminino;Alimento gorduroso;Aumentar massa corporal
+60.0;170;16;Masculino;N/A;Aumentar massa corporal
+60.5;174;16;Feminino;leite ;Satisfeito com peso atual
+71.0;167;46;Feminino;Repolho, beterraba ;Satisfeito com peso atual
+70.9;185;15;Masculino;N/A;Aumentar massa corporal
+60.0;163;15;Feminino;N/A;Emagrecer
+57.2;162;14;Feminino;N/A;Emagrecer
+52.3;169;21;Feminino;N/A;Aumentar massa corporal
+55.0;170;15;Feminino;N/A;Satisfeito com peso atual
+86.0;168;49;Feminino;N/A;Emagrecer
+82.0;172;52;Feminino;Leite;Emagrecer
+85.0;186;27;Masculino;Lactose;Aumentar massa corporal
+68.0;174;17;Masculino;Feijão, legumes;Satisfeito com peso atual
+70.0;169;23;Feminino;Amendoim;Emagrecer
+52.0;165;24;Feminino;N/A;Aumentar massa corporal
+75.0;186;15;Masculino;N/A;Satisfeito com peso atual
+48.9;167;17;Feminino;N/A;Aumentar massa corporal
+58.9;174;16;Masculino;Ameixa ;Aumentar massa corporal
+54.6;170;16;Masculino;N/A;Aumentar massa corporal
+71.8;146;50;Feminino;N/A;Emagrecer
+61.1;170;15;Masculino;N/A;Aumentar massa corporal
+83.0;150;38;Feminino;Refrigerante, massas;Emagrecer
+90.0;164;51;Feminino;N/A;Emagrecer
+96.0;170;42;Feminino;N/A;Emagrecer
+50.0;167;16;Feminino;N/A;Aumentar massa corporal
+77.0;170;15;Feminino;N/A;Emagrecer
+57.5;171;15;Masculino;N/A;Aumentar massa corporal
+62.0;170;16;Feminino;N/A;Aumentar massa corporal
+49.8;160;15;Feminino;abacaxi ;Aumentar massa corporal
+53.0;150;18;Feminino;N/A;Emagrecer
+57.0;168;67;Feminino;N/A;Satisfeito com peso atual
+100.0;175;40;Feminino;N/A;Emagrecer
+48.0;166;16;Masculino;Leite, derivados;Aumentar massa corporal
+53.8;168;16;Feminino;Ervilha, batata palha;Aumentar massa corporal
+35.0;151;15;Feminino;N/A;Satisfeito com peso atual
+43.0;160;16;Feminino;feijão e coco;Emagrecer
+54.7;170;15;Masculino;N/A;Aumentar massa corporal
+75.0;165;15;Feminino;N/A;Emagrecer
+55.0;165;15;Feminino;pasta de amendoim ;Aumentar massa corporal
+54.7;159;16;Feminino;N/A;Emagrecer
+50.0;151;15;Feminino;chocolate ;Satisfeito com peso atual
+57.0;162;15;Feminino;N/A;Emagrecer
+58.8;183;17;Masculino;N/A;Aumentar massa corporal
+86.0;187;15;Masculino;fava ;Aumentar massa corporal
+50.0;175;16;Masculino;N/A;Aumentar massa corporal
+61.0;175;17;Feminino;leite;Satisfeito com peso atual
+97.8;170;38;Feminino;Fígado, miúdos ;Emagrecer
+57.0;171;17;Masculino;Chocolate, palmito, figado ;Aumentar massa corporal
+51.0;161;15;Feminino;N/A;Emagrecer
+55.0;160;15;Feminino;chocolate;Aumentar massa corporal
+54.3;166;15;Feminino;N/A;Satisfeito com peso atual
+56.4;158;15;Feminino;Corantes, frutos do mar;Aumentar massa corporal
+40.1;163;32;Feminino;Feijão,xuxu, berinjela, jiló;Satisfeito com peso atual
+56.8;157;16;Masculino;N/A;Satisfeito com peso atual
+71.4;163;40;Feminino;N/A;Emagrecer
+74.0;185;21;Masculino;N/A;Aumentar massa corporal
+75.0;167;32;Masculino;N/A;Aumentar massa corporal
+94.0;170;50;Feminino;N/A;Emagrecer
+47.8;157;15;Feminino;N/A;Aumentar massa corporal
+103.0;172;42;Masculino;N/A;Emagrecer
+52.1;164;21;Feminino;N/A;Aumentar massa corporal
+90.0;175;23;Masculino;N/A;Aumentar massa corporal
+57.7;173;19;Feminino;Frutos do mar ;Satisfeito com peso atual
+53.0;163;20;Feminino;N/A;Emagrecer
+55.0;168;17;Feminino;Derivados de Lactose;Satisfeito com peso atual
+80.0;161;17;Feminino;N/A;Emagrecer
+74.0;162;48;Feminino;N/A;Emagrecer
+68.0;158;35;Feminino;Carne de porco;Emagrecer
+83.4;165;47;Feminino;N/A;Emagrecer
+82.0;167;35;Feminino;N/A;Emagrecer
+78.0;163;42;Feminino;N/A;Emagrecer
+94.0;160;33;Feminino;N/A;Emagrecer
+70.0;165;18;Feminino;N/A;Satisfeito com peso atual
+56.0;153;37;Feminino;N/A;Emagrecer
+73.0;162;49;Feminino;Camarão,carne suína, leite , glutem;Emagrecer
+72.0;166;36;Feminino;N/A;Emagrecer
+65.0;170;21;Masculino;N/A;Aumentar massa corporal
+45.0;163;15;Feminino;N/A;Satisfeito com peso atual
+128.0;165;37;Feminino;N/A;Emagrecer
+88.0;180;27;Masculino;N/A;Satisfeito com peso atual
+60.0;165;19;Feminino;Leite, derivados ;Emagrecer
+86.0;187;20;Masculino;N/A;Aumentar massa corporal
+72.4;175;22;Masculino;N/A;Aumentar massa corporal
+76.2;174;15;Masculino;N/A;Satisfeito com peso atual
+71.3;175;16;Masculino;N/A;Emagrecer
+60.5;163;17;Feminino;N/A;Satisfeito com peso atual
+40.0;157;17;Feminino;N/A;Satisfeito com peso atual
+105.0;159;35;Feminino;Leite;Emagrecer
+65.8;160;29;Feminino;N/A;Satisfeito com peso atual
+50.5;165;15;Feminino;N/A;Aumentar massa corporal
+62.0;185;17;Masculino;N/A;Satisfeito com peso atual
+72.8;180;29;Masculino;Farinha;Aumentar massa corporal
+58.0;176;15;Masculino;Feijão.;Satisfeito com peso atual
+83.0;162;54;Feminino;N/A;Emagrecer
+75.3;157;55;Feminino;N/A;Aumentar massa corporal
+79.0;160;56;Feminino;Gluten, lactose;Emagrecer
+64.0;168;47;Feminino;N/A;Aumentar massa corporal
+67.6;159;30;Feminino;N/A;Emagrecer
+58.0;165;30;Feminino;N/A;Satisfeito com peso atual
+78.0;155;45;Feminino;N/A;Emagrecer
+65.8 ;155;56;Feminino;Abacaxi ;Aumentar massa corporal
+69.0;163;27;Feminino;N/A;Aumentar massa corporal
+86.0;175;40;Masculino;N/A;Emagrecer
+83.0;160;45;Feminino;N/A;Emagrecer
+79.0;173;54;Masculino;N/A;Emagrecer
+59.0;157;32;Feminino;Camarão;Emagrecer
+62.0;160;50;Feminino;Arroz, feijao, gorduras em geral, lactose;Satisfeito com peso atual
+56.9;164;47;Feminino;Lactose ;Satisfeito com peso atual
+80.0;163;38;Feminino;N/A;Emagrecer
+93.6;168;30;Feminino;N/A;Emagrecer
+72.4;155;48;Feminino;N/A;Emagrecer
+67.2;160;54;Feminino;Leite;Emagrecer
+62.0;157;45;Feminino;N/A;Emagrecer
+84.0;170;44;Feminino;N/A;Emagrecer
+65.8;152;54;Feminino;N/A;Emagrecer
+53.7;157;27;Feminino;Leite;Satisfeito com peso atual
+67.7;155;25;Feminino;N/A;Emagrecer
+78.0;176;64;Feminino;N/A;Aumentar massa corporal
+71.0;162;37;Feminino;N/A;Emagrecer
+56.0;152;39;Feminino;N/A;Aumentar massa corporal
+74.0;158;35;Feminino;Glúten ;Emagrecer
+102.0;169;48;Feminino;N/A;Emagrecer
+77.5;171;30;Masculino;N/A;Aumentar massa corporal
+106.0;168;54;Feminino;N/A;Emagrecer
+70.1;183;20;Masculino;N/A;Aumentar massa corporal
+53.0;148;38;Feminino;N/A;Emagrecer
+70.0;163;34;Feminino;N/A;Emagrecer
+111.0;177;46;Feminino;N/A;Emagrecer
+63.0;158;38;Feminino;N/A;Emagrecer
+72.0;182;47;Masculino;N/A;Aumentar massa corporal
+98.0;160;46;Feminino;N/A;Emagrecer
+67.0;167;52;Feminino;Feijão ;Emagrecer
+59.0;162;20;Feminino;N/A;Aumentar massa corporal
+60.0;158;42;Feminino;Pimenta, frituras, leite integral;Satisfeito com peso atual
+66.0;160;46;Masculino;N/A;Satisfeito com peso atual
+61.1;170;17;Masculino;N/A;Aumentar massa corporal
+73.4;164;43;Feminino;N/A;Emagrecer
+59.0;165;50;Feminino;Camarão ;Emagrecer
+76.0;164;43;Feminino;N/A;Emagrecer
+80.0;167;18;Feminino;N/A;Emagrecer
+63.5;150;49;Feminino;N/A;Emagrecer
+85.0;168;38;Feminino;N/A;Emagrecer
+109.0;159;43;Feminino;N/A;Emagrecer
+81.0;164;34;Masculino;N/A;Emagrecer
+120.0;175;57;Masculino;N/A;Emagrecer
