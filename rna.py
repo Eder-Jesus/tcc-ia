@@ -42,6 +42,8 @@ if __name__ == "__main__":
         query_recipes = "SELECT * FROM Dieta"
         df_recipes = pd.read_sql(query_recipes, conn)
 
+        print(df_recipes)
+
         query_recipes = "SELECT TOP 1 * FROM Usuario where status = 1"
         df_user = pd.read_sql(query_recipes, conn)
 
@@ -100,16 +102,31 @@ if __name__ == "__main__":
 
         user_objetivo = df_users[df_users['Id'] == user_id]['Objetivo'].values[0]
 
-        top_10_recomendacoes = recommend_recipes_for_user(user_id, userObjetivo, model, df_recipes, top_n=10)
+        top_10_recomendacoes = recommend_recipes_for_user(user_id, user_objetivo, model, df_recipes, top_n=50)
 
-        receitas = ",".join([str(receita_id) for receita_id, _ in top_10_recomendacoes])
+        ids_unicos = set(receita_id for receita_id, _ in top_10_recomendacoes)
 
-        queryInsert = f"INSERT into Dieta (UsuarioId, ListaReceita) values ({userTeste}, '{receitas}')"
+        ids_unicos = list(ids_unicos)[:10]
+
+        ids_string = ""
+
+        for receita_id in ids_unicos:
+            ids_string += str(receita_id) + ","
+
+        if ids_string.endswith(","):
+            ids_string = ids_string[:-1]
+
+        print(ids_string)
+
+        queryInsert = f"INSERT into Dieta (UsuarioId, ListaReceita) values ({userTeste}, '{ids_string}')"
+        queryUpdate = f"UPDATE Usuario SET Status = 0 WHERE id = {userTeste}"
+
         cursor.execute(queryInsert)
         conn.commit()
+        cursor.execute(queryUpdate)
+        conn.commit()
 
-        print(f"Receita IDs: {receitas}")
-
+        print(ids_unicos)
         print(f"Principais recomendações para o usuário {userTeste} com objetivo '{userObjetivo}':")
         for receita_id, pontuacao in top_10_recomendacoes:
             print(f"Receita ID: {receita_id}, Pontuação: {pontuacao}")
