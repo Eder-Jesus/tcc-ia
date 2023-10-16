@@ -42,7 +42,8 @@ if __name__ == "__main__":
         query_recipes = "SELECT * FROM Dieta"
         df_recipes = pd.read_sql(query_recipes, conn)
 
-        conn.close()
+        query_recipes = "SELECT TOP 1 * FROM Usuario where status = 1"
+        df_user = pd.read_sql(query_recipes, conn)
 
         df_recipes['ListaReceita'] = df_recipes['ListaReceita'].apply(lambda x: list(map(int, x.split(','))))
 
@@ -91,22 +92,29 @@ if __name__ == "__main__":
 
         model.fit([user_ids_tensor, recipe_ids_tensor], y_train, epochs=10, batch_size=64)
 
-        user_ids_test = tf.convert_to_tensor(X_test[:, 0], dtype=tf.int32)
-        recipe_ids_test = tf.convert_to_tensor(X_test[:, 1], dtype=tf.int32)
-
-        loss, accuracy = model.evaluate([user_ids_test, recipe_ids_test], y_test)
-        print(f"Loss no conjunto de teste: {loss}")
-        print(f"Acurácia no conjunto de teste: {accuracy}")
-
         user_id = 386
+        userTeste = df_user['Id'].values[0]
+        userObjetivo = df_user['Objetivo'].values[0]
+
+        print(userTeste)
 
         user_objetivo = df_users[df_users['Id'] == user_id]['Objetivo'].values[0]
 
-        top_10_recomendacoes = recommend_recipes_for_user(user_id, user_objetivo, model, df_recipes, top_n=10)
+        top_10_recomendacoes = recommend_recipes_for_user(user_id, userObjetivo, model, df_recipes, top_n=10)
 
-        print(f"Principais recomendações para o usuário {user_id} com objetivo '{user_objetivo}':")
+        receitas = ",".join([str(receita_id) for receita_id, _ in top_10_recomendacoes])
+
+        queryInsert = f"INSERT into Dieta (UsuarioId, ListaReceita) values ({userTeste}, '{receitas}')"
+        cursor.execute(queryInsert)
+        conn.commit()
+
+        print(f"Receita IDs: {receitas}")
+
+        print(f"Principais recomendações para o usuário {userTeste} com objetivo '{userObjetivo}':")
         for receita_id, pontuacao in top_10_recomendacoes:
             print(f"Receita ID: {receita_id}, Pontuação: {pontuacao}")
+
+        conn.close()
 
     except pyodbc.Error as ex:
         print(f"Erro na conexão com o banco de dados: {ex}")
