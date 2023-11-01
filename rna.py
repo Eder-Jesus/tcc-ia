@@ -4,9 +4,9 @@ import tensorflow as tf
 from tensorflow.keras.layers import Input, Embedding, Flatten, Dense, Multiply
 from sklearn.model_selection import train_test_split
 import numpy as np
+import time
 
 def recommend_recipes_for_user(user_id, user_objetivo, model, df_recipes, top_n=10):
-
     user_tensor = tf.convert_to_tensor([user_id])
 
     num_samples = len(df_recipes)
@@ -28,110 +28,107 @@ def recommend_recipes_for_user(user_id, user_objetivo, model, df_recipes, top_n=
 if __name__ == "__main__":
     url, usuario, senha, database = "107.23.75.36,1433", "sa", "Urubu100", "nutrilifelile"
 
-    try:
-        conn = pyodbc.connect(
-            f'DRIVER=SQL Server;SERVER={url};DATABASE={database};UID={usuario};PWD={senha}'
-        )
-        cursor = conn.cursor()
+    while True:
+        try:
+            conn = pyodbc.connect(
+                f'DRIVER=SQL Server;SERVER={url};DATABASE={database};UID={usuario};PWD={senha}'
+            )
+            cursor = conn.cursor()
 
-        user_ids = [386, 387, 388, 390, 391, 393, 395, 396, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413]
-        query_users = "SELECT * FROM Usuario WHERE ID IN ({0})".format(
-            ", ".join(map(str, user_ids)))
-        df_users = pd.read_sql(query_users, conn)
+            user_ids = [386, 387, 388, 390, 391, 393, 395, 396, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413]
+            query_users = "SELECT * FROM Usuario WHERE ID IN ({0})".format(
+                ", ".join(map(str, user_ids)))
+            df_users = pd.read_sql(query_users, conn)
 
-        query_recipes = "SELECT * FROM Dieta"
-        df_recipes = pd.read_sql(query_recipes, conn)
+            query_recipes = "SELECT * FROM Dieta"
+            df_recipes = pd.read_sql(query_recipes, conn)
 
-        print(df_recipes)
+            query_recipes = "SELECT TOP 1 * FROM Usuario where status = 1"
+            df_user = pd.read_sql(query_recipes, conn)
 
-        query_recipes = "SELECT TOP 1 * FROM Usuario where status = 1"
-        df_user = pd.read_sql(query_recipes, conn)
+            df_recipes['ListaReceita'] = df_recipes['ListaReceita'].apply(lambda x: list(map(int, x.split(','))))
 
-        df_recipes['ListaReceita'] = df_recipes['ListaReceita'].apply(lambda x: list(map(int, x.split(','))))
+            df_recipes = df_recipes.explode('ListaReceita')
 
-        df_recipes = df_recipes.explode('ListaReceita')
+            interactions_df = pd.merge(df_users, df_recipes, left_on='Id', right_on='UsuarioId')
 
-        interactions_df = pd.merge(df_users, df_recipes, left_on='Id', right_on='UsuarioId')
+            num_users = len(df_users)
+            num_recipes = len(df_recipes)
 
-        num_users = len(df_users)
-        num_recipes = len(df_recipes)
+            embedding_dim = 64
 
-        embedding_dim = 64
+            X = interactions_df[['UsuarioId', 'ListaReceita']].values
+            y = interactions_df['Objetivo'].values
 
-        X = interactions_df[['UsuarioId', 'ListaReceita']].values
-        y = interactions_df['Objetivo'].values
+            y = pd.Series(y).map({"Emagrecer": 0, "Criar massa corporal": 1}).values
 
-        y = pd.Series(y).map({"Emagrecer": 0, "Criar massa corporal": 1}).values
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            max_user_id = max(X_train[:, 0])
+            max_recipe_id = max(X_train[:, 1])
 
-        max_user_id = max(X_train[:, 0])
-        max_recipe_id = max(X_train[:, 1])
+            X_test = X_test[(X_test[:, 0] <= max_user_id) & (X_test[:, 1] <= max_recipe_id)]
+            y_test = y_test[(X_test[:, 0] <= max_user_id) & (X_test[:, 1] <= max_recipe_id)]
 
-        X_test = X_test[(X_test[:, 0] <= max_user_id) & (X_test[:, 1] <= max_recipe_id)]
-        y_test = y_test[(X_test[:, 0] <= max_user_id) & (X_test[:, 1] <= max_recipe_id)]
+            input_user = Input(shape=(1,))
+            input_recipe = Input(shape=(1,))
 
-        input_user = Input(shape=(1,))
-        input_recipe = Input(shape=(1,))
+            embedding_user = Embedding(input_dim=       max_user_id + 1, output_dim=embedding_dim)(input_user)
+            embedding_recipe = Embedding(input_dim=max_recipe_id + 1, output_dim=embedding_dim)(input_recipe)
 
-        embedding_user = Embedding(input_dim=max_user_id + 1, output_dim=embedding_dim)(input_user)
-        embedding_recipe = Embedding(input_dim=max_recipe_id + 1, output_dim=embedding_dim)(input_recipe)
+            multiply_layer = Multiply()([embedding_user, embedding_recipe])
 
-        multiply_layer = Multiply()([embedding_user, embedding_recipe])
+            flatten = Flatten()(multiply_layer)
 
-        flatten = Flatten()(multiply_layer)
+            dense1 = Dense(128, activation='relu')(flatten)
+            dense2 = Dense(64, activation='relu')(dense1)
+            output = Dense(1, activation='sigmoid')(dense2)
 
-        dense1 = Dense(128, activation='relu')(flatten)
-        dense2 = Dense(64, activation='relu')(dense1)
-        output = Dense(1, activation='sigmoid')(dense2)
+            model = tf.keras.Model(inputs=[input_user, input_recipe], outputs=output)
 
-        model = tf.keras.Model(inputs=[input_user, input_recipe], outputs=output)
+            model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-        model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+            user_ids_tensor = tf.convert_to_tensor(X_train[:, 0], dtype=tf.int32)
+            recipe_ids_tensor = tf.convert_to_tensor(X_train[:, 1], dtype=tf.int32)
 
-        user_ids_tensor = tf.convert_to_tensor(X_train[:, 0], dtype=tf.int32)
-        recipe_ids_tensor = tf.convert_to_tensor(X_train[:, 1], dtype=tf.int32)
+            model.fit([user_ids_tensor, recipe_ids_tensor], y_train, epochs=100, batch_size=64)
 
-        model.fit([user_ids_tensor, recipe_ids_tensor], y_train, epochs=10, batch_size=64)
+            user_id = 396
+            userTeste = df_user['Id'].values[0]
+            userObjetivo = df_user['Objetivo'].values[0]
 
-        user_id = 386
-        userTeste = df_user['Id'].values[0]
-        userObjetivo = df_user['Objetivo'].values[0]
+            user_objetivo = df_users[df_users['Id'] == user_id]['Objetivo'].values[0]
 
-        print(userTeste)
+            top_10_recomendacoes = recommend_recipes_for_user(user_id, user_objetivo, model, df_recipes, top_n=50)
 
-        user_objetivo = df_users[df_users['Id'] == user_id]['Objetivo'].values[0]
+            ids_unicos = set(receita_id for receita_id, _ in top_10_recomendacoes)
 
-        top_10_recomendacoes = recommend_recipes_for_user(user_id, user_objetivo, model, df_recipes, top_n=50)
+            ids_unicos = list(ids_unicos)[:10]
 
-        ids_unicos = set(receita_id for receita_id, _ in top_10_recomendacoes)
+            ids_string = ""
 
-        ids_unicos = list(ids_unicos)[:10]
+            for receita_id in ids_unicos:
+                ids_string += str(receita_id) + ","
 
-        ids_string = ""
+            if ids_string.endswith(","):
+                ids_string = ids_string[:-1]
 
-        for receita_id in ids_unicos:
-            ids_string += str(receita_id) + ","
+            queryInsert = f"INSERT into Dieta (UsuarioId, ListaReceita) values ({userTeste}, '{ids_string}')"
+            queryUpdate = f"UPDATE Usuario SET Status = 0 WHERE id = {userTeste}"
 
-        if ids_string.endswith(","):
-            ids_string = ids_string[:-1]
+            cursor.execute(queryInsert)
+            conn.commit()
+            cursor.execute(queryUpdate)
+            conn.commit()
 
-        print(ids_string)
+            print(ids_unicos)
+            print(f"Principais recomendações para o usuário {userTeste} com objetivo '{userObjetivo}':")
+            for receita_id, pontuacao in top_10_recomendacoes:
+                print(f"Receita ID: {receita_id}, Pontuação: {pontuacao}")
 
-        queryInsert = f"INSERT into Dieta (UsuarioId, ListaReceita) values ({userTeste}, '{ids_string}')"
-        queryUpdate = f"UPDATE Usuario SET Status = 0 WHERE id = {userTeste}"
+            conn.close()
 
-        cursor.execute(queryInsert)
-        conn.commit()
-        cursor.execute(queryUpdate)
-        conn.commit()
+        except pyodbc.Error as ex:
+            print(f"Erro na conexão com o banco de dados: {ex}")
 
-        print(ids_unicos)
-        print(f"Principais recomendações para o usuário {userTeste} com objetivo '{userObjetivo}':")
-        for receita_id, pontuacao in top_10_recomendacoes:
-            print(f"Receita ID: {receita_id}, Pontuação: {pontuacao}")
-
-        conn.close()
-
-    except pyodbc.Error as ex:
-        print(f"Erro na conexão com o banco de dados: {ex}")
+        time.sleep(10)
