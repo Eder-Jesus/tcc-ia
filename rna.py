@@ -26,7 +26,7 @@ def recommend_recipes_for_user(user_id, user_objetivo, model, df_recipes, top_n=
     return top_recomendacoes
 
 if __name__ == "__main__":
-    url, usuario, senha, database = "107.23.75.36,1433", "sa", "Urubu100", "nutrilifelile"
+    url, usuario, senha, database = "18.233.72.114,1433", "sa", "Urubu100", "nutrilifelile"
 
     while True:
         try:
@@ -35,7 +35,7 @@ if __name__ == "__main__":
             )
             cursor = conn.cursor()
 
-            user_ids = [386, 387, 388, 390, 391, 393, 395, 396, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413]
+            user_ids = [363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381]
             query_users = "SELECT * FROM Usuario WHERE ID IN ({0})".format(
                 ", ".join(map(str, user_ids)))
             df_users = pd.read_sql(query_users, conn)
@@ -46,6 +46,7 @@ if __name__ == "__main__":
             query_recipes = "SELECT TOP 1 * FROM Usuario where status = 1"
             df_user = pd.read_sql(query_recipes, conn)
 
+            print(df_user)
             df_recipes['ListaReceita'] = df_recipes['ListaReceita'].apply(lambda x: list(map(int, x.split(','))))
 
             df_recipes = df_recipes.explode('ListaReceita')
@@ -73,7 +74,7 @@ if __name__ == "__main__":
             input_user = Input(shape=(1,))
             input_recipe = Input(shape=(1,))
 
-            embedding_user = Embedding(input_dim=       max_user_id + 1, output_dim=embedding_dim)(input_user)
+            embedding_user = Embedding(input_dim=max_user_id + 1, output_dim=embedding_dim)(input_user)
             embedding_recipe = Embedding(input_dim=max_recipe_id + 1, output_dim=embedding_dim)(input_recipe)
 
             multiply_layer = Multiply()([embedding_user, embedding_recipe])
@@ -93,13 +94,12 @@ if __name__ == "__main__":
 
             model.fit([user_ids_tensor, recipe_ids_tensor], y_train, epochs=100, batch_size=64)
 
-            user_id = 396
+            user_id = 362
             userTeste = df_user['Id'].values[0]
             userObjetivo = df_user['Objetivo'].values[0]
+            print(userObjetivo)
 
-            user_objetivo = df_users[df_users['Id'] == user_id]['Objetivo'].values[0]
-
-            top_10_recomendacoes = recommend_recipes_for_user(user_id, user_objetivo, model, df_recipes, top_n=50)
+            top_10_recomendacoes = recommend_recipes_for_user(user_id, userObjetivo, model, df_recipes, top_n=50)
 
             ids_unicos = set(receita_id for receita_id, _ in top_10_recomendacoes)
 
